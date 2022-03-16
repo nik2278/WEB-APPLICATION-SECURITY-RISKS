@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## 1. Broken Access Control
 
-You can use the [editor on GitHub](https://github.com/nik2278/page/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Access control enforces policy such that users cannot act outside of their intended permissions. Failures typically lead to unauthorized information disclosure, modification, or destruction of all data or performing a business function outside the user's limits.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Broken Access Control
 
-### Markdown
+### Directory Traversal
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### CSRF
 
-```markdown
-Syntax highlighted code block
+## 2. Cryptographic Failures
 
-# Header 1
-## Header 2
-### Header 3
+Many web applications and APIs do not properly protect sensitive data with strong encryption. Attackers may steal or modify such weakly protected data to conduct credit card fraud, identity theft, or other crimes. Sensitive data must be encryption at rest and in transit, using a modern (and correctly configured) encryption algorithm.
 
-- Bulleted
-- List
+### Unencrypted Communication
 
-1. Numbered
-2. List
+## 3. Injection
 
-**Bold** and _Italic_ and `Code` text
+Injection flaws, such as SQL, NoSQL, OS, and LDAP injection, occur when untrusted data is sent to an interpreter as part of a command or query. The attacker’s hostile data can trick the interpreter into executing unintended commands or accessing data without proper authorization.
 
-[Link](url) and ![Image](src)
-```
+### SQL Injection
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+### Command Execution
 
-### Jekyll Themes
+## 4. Insecure Design
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/nik2278/page/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Pre-coding activities are critical for the design of secure software. The design phase of you development lifecycle should gather security requirements and model threats, and development time should be budgeted to allow for these requirements to be met. As software changes, your team should test assumptions and conditions for expected and failure flows, ensuring they are still accurate and desirable. Failure to do so will let slip critical information to attackers, and fail to anticipate novel attack vectors.
 
-### Support or Contact
+### Insecure Design
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+### Information Leakage
+
+### File Upload
